@@ -1,6 +1,7 @@
 import React , {useState}  from 'react'
 
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
 const NavBar = (props) => {
@@ -11,7 +12,7 @@ const NavBar = (props) => {
         <>  
                 <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
                     <div className="container-fluid ">
-                        <a className="navbar-brand" href="/">{props.title}</a>
+                        <Link className="navbar-brand" to="/">{props.title}</Link>
                           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={() => {setshow(!show)} }>
                           <span className="navbar-toggler-icon"></span>
                           </button>
@@ -20,14 +21,14 @@ const NavBar = (props) => {
                        
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                            <a className="nav-link active" style= {{ color: props.mode === "dark" ? "white": "black" }} aria-current="page" href="/">{props.home}</a>
+                            <Link className="nav-link active" style= {{ color: props.mode === "dark" ? "white": "black" }} aria-current="page" to="/">{props.home}</Link>
                             </li>
                             <li className="nav-item">
-                            <a className="nav-link" style= {{ color: props.mode === "dark" ? "white": "black" }} href="/">{props.blog}</a>
+                            <Link className="nav-link" style= {{ color: props.mode === "dark" ? "white": "black" }} to="/blog">{props.blog}</Link>
                             </li>
                            
                             <li className="nav-item">
-                            <a className="nav-link " style= {{ color: props.mode === "dark" ? "white": "black" }} href="/" tabIndex="-1" >{props.about}</a>
+                            <Link className="nav-link " style= {{ color: props.mode === "dark" ? "white": "black" }} to="/about" tabIndex="-1" >{props.about}</Link>
                             </li>
                             </ul>
                         

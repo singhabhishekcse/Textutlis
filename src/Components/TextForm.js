@@ -13,24 +13,28 @@ import PropTypes from 'prop-types';
 const handleUpClick = ()=>{
       const updatedUpText = text.toUpperCase();
       setText(updatedUpText)
-
+      props.showAlert("Coverted to Upper Case " , "success :")
 }
 const handleLwClick = ()=>{
     const updatedLwText = text.toLowerCase();
     setText(updatedLwText)
+    props.showAlert("Coverted to Lower Case " , "success :")
 }
 const handleResetClick =()=>{
     setText("")
+    props.showAlert("Resert " , "success :")
 }
 const handleCopyClick=()=>{
     let text = document.getElementById("textBox")
     text.select()
     navigator.clipboard.writeText(text.value)
+    props.showAlert("copy to clipboard " , "success :")
 
 }
 const removeExtraSpaces =()=>{
      let newText = text.split(/[ ]+/)
      setText(newText.join(" "))
+     props.showAlert("Removing extra spaces " , "success :")
 }
 const habdleOnChange = (event)=>{
     setText(event.target.value);

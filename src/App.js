@@ -1,9 +1,17 @@
 import React , {useState} from 'react';
 import Alert from './Components/Alert';
-// import About from './Components/about.js';
+import About from './Components/about.js';
 // import Card from './Components/card';
 import NavBar from './Components/NavBar';
 import TextForm from './Components/TextForm';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  
+} from "react-router-dom";
+import Blog from './Components/Blog';
+
 
 function App() {
    const [mode, setMode] = useState("light")
@@ -15,6 +23,9 @@ function App() {
                                   meesage : msg,
                                   type: type
                               })
+                        setTimeout(()=>{
+                          setAlert(null)
+                        },1500)
                      }
 
 
@@ -32,25 +43,31 @@ function App() {
 
   }
   
-  
+
 
  
 
 
   return (
     <>
-       <NavBar mode={mode} toggleMode = {toggleMode}  title="Textutlis" home="Home" blog="Blog" about="About"  login="Log In" logout="Log Out" />
+        <Router>
+           <NavBar mode={mode} toggleMode = {toggleMode}  title="Textutlis" home="Home" blog="Blog" about="About"  login="Log In" logout="Log Out" />
+             <Alert alert={alert} />
+    
+       <Switch>
+          
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/">
+               <TextForm heading="Enter Your Text Below" mode={mode}   showAlert= {showAlert} />
+          </Route>
+          <Route exact path="/blog">
+            <Blog />
+          </Route>
+        </Switch>
 
-       <Alert alert={alert} />
-
-
-       <TextForm heading="Enter Your Text Below" mode={mode} />
-
-        {/* <Card />
-       <About /> */}
-        
-
-
+       </Router>
     </>
   );
 }
