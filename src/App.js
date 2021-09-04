@@ -1,7 +1,6 @@
 import React , {useState} from 'react';
 import Alert from './Components/Alert';
 import About from './Components/about.js';
-// import Card from './Components/card';
 import NavBar from './Components/NavBar';
 import TextForm from './Components/TextForm';
 import {
@@ -11,10 +10,13 @@ import {
   
 } from "react-router-dom";
 import Blog from './Components/Blog';
+import Footer from './Components/Footer';
 
 
 function App() {
+
    const [mode, setMode] = useState("light")
+
    const [alert, setAlert] = useState(null)
 
 
@@ -57,17 +59,18 @@ function App() {
        <Switch>
           
           <Route exact path="/about">
-            <About />
+            <About  mode={mode} />
           </Route>
           <Route exact path="/">
                <TextForm heading="Enter Your Text Below" mode={mode}   showAlert= {showAlert} />
           </Route>
           <Route exact path="/blog">
-            <Blog />
+            <Blog  mode={mode} />
           </Route>
         </Switch>
-
+            
        </Router>
+       <Footer />
     </>
   );
 }
