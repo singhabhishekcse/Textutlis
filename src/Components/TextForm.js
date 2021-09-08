@@ -58,11 +58,15 @@ const habdleOnChange = (event)=>{
                     <textarea className="form-control" value={text} id="textBox" rows="8"   onChange={habdleOnChange}  placeholder="enter text here"    style= {{ backgroundColor: props.mode === "dark" ? "#f8fafc": "white",
                               color: props.mode === "dark" ? "black": "black"  }}></textarea>
 
-                    <button type="button" className="btn btn-info my-3 mx-1" onClick={handleUpClick}>UpperCase</button>
-                    <button type="button" className="btn btn-info my-3 mx-1" onClick={handleLwClick}>LowerCase</button>
-                    <button type="button" className="btn btn-info my-2 mx-1" onClick={handleResetClick}>Resert </button>   
-                    <button type="button" className="btn btn-info my-2 mx-1" onClick={handleCopyClick}>Copy Text</button>   
-                    <button type="button" className="btn btn-info my-2 mx-1" onClick={removeExtraSpaces}>Remove Extra Space</button>    
+                    <button disabled={text.length === 0} type="button" className="btn btn-info my-3 mx-1 " style={{color : "black" , backgroundColor : "#ffba08", fontSize : "1rem"}} onClick={handleUpClick}>UpperCase</button>
+
+                    <button disabled={text.length === 0} type="button" className="btn btn-info my-3 mx-1" style={{color : "black" , backgroundColor : "#ffba08", fontSize : "1rem"}} onClick={handleLwClick}>LowerCase</button>
+
+                    <button disabled={text.length === 0}  type="button" className="btn btn-info my-2 mx-1" style={{color : "black" , backgroundColor : "#ffba08", fontSize : "1rem"}} onClick={handleResetClick}>Resert </button>
+
+                    <button disabled={text.length === 0}  type="button" className="btn btn-info my-2 mx-1" style={{color : "black" , backgroundColor : "#ffba08", fontSize : "1rem"}} onClick={handleCopyClick}>Copy Text</button> 
+
+                    <button disabled={text.length === 0}  type="button" className="btn btn-info my-2 mx-1" style={{color : "black" , backgroundColor : "#ffba08", fontSize : "1rem"}} onClick={removeExtraSpaces}>Remove Extra Space</button>    
                 </div>
              </div>
              <div className="container mx-15 my-5">
