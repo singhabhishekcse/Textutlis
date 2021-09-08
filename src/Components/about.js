@@ -18,7 +18,7 @@ const About = (props) => {
                                 <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div className="accordion-body"  style= {{ backgroundColor: props.mode === "dark" ? "##f4f5f6": "white",
                               color: props.mode === "dark" ? "black": "black"  }}>
-                                    <strong>Textutlis</strong> give you a way to analyze your text quickly and efficently.Be it word count character count or
+                                    <strong>Textutlis</strong> give you a way to analyze your text quickly and efficently.Be it word count character counter
                                 </div>
                                 </div>
                             </div>
