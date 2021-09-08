@@ -55,7 +55,7 @@ const habdleOnChange = (event)=>{
                 <div className="mstateb-3 my-5" >
                  
                     <label htmlFor="textBox" className="form-label"> <h2  style= {{ color: props.mode === "dark" ? "white": "black" }}> {props.heading}</h2></label>
-                    <textarea className="form-control" value={text} id="textBox" rows="8"   onChange={habdleOnChange}  placeholder="enter text here"    style= {{ backgroundColor: props.mode === "dark" ? "#dcdcdc": "white",
+                    <textarea className="form-control" value={text} id="textBox" rows="8"   onChange={habdleOnChange}  placeholder="enter text here"    style= {{ backgroundColor: props.mode === "dark" ? "#f8fafc": "white",
                               color: props.mode === "dark" ? "black": "black"  }}></textarea>
 
                     <button type="button" className="btn btn-info my-3 mx-1" onClick={handleUpClick}>UpperCase</button>
