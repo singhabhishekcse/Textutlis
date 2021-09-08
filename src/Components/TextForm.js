@@ -69,17 +69,17 @@ const habdleOnChange = (event)=>{
                     <button disabled={text.length === 0}  type="button" className="btn btn-info my-2 mx-1" style={{color : "black" , backgroundColor : "#ffba08", fontSize : "1rem"}} onClick={removeExtraSpaces}>Remove Extra Space</button>    
                 </div>
              </div>
-             <div className="container mx-15 my-5">
+             <div className="container-md mx-15 my-5">
+             
                  <h2 style= {{ color: props.mode === "dark" ? "white": "black" }}>Your Text Summary</h2>
                  <p style= {{ color: props.mode === "dark" ? "white": "black" }}> <b style= {{ color: props.mode === "dark" ? "white": "black" }}>{ arrUdated.length}</b> Words , <b>{text.length}</b> Characters</p>
                  <p style= {{ color: props.mode === "dark" ? "white": "black" }}><b>{arrUdated1.length}</b> Sentence</p>
-
-
-
-
                  <p style= {{ color: props.mode === "dark" ? "white": "black" }}><b>{0.008 *  arrUdated.length }</b> Minutes reads </p>
+                 </div>
+                 <div className="col">
                  <h2 style= {{ color: props.mode === "dark" ? "white": "black" }}>Preview</h2>
                  <p style= {{ color: props.mode === "dark" ? "white": "black" }}>{text}</p>
+                 
              </div>
             </div>
 

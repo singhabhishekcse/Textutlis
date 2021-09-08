@@ -68,9 +68,9 @@ function App() {
             <Blog  mode={mode} />
           </Route>
         </Switch>
-            
+        <Footer />
        </Router>
-       <Footer />
+       
     </>
   );
 }
