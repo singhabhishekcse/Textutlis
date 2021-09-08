@@ -62,7 +62,7 @@ function App() {
             <About  mode={mode} />
           </Route>
           <Route exact path="/">
-               <TextForm heading="Enter Your Text Below" mode={mode}   showAlert= {showAlert} />
+               <TextForm heading="Try Textutlis Counter" mode={mode}   showAlert= {showAlert} />
           </Route>
           <Route exact path="/blog">
             <Blog  mode={mode} />
